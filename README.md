@@ -3,7 +3,9 @@ This is a TTU university project completed by me - a web app for tracking TV ser
 Please test the web application here: http://dijkstra.cs.ttu.ee/~Kaspar.Metsa/Kasutajaliidesed
 
 *For testing*: 
+
 username: admin
+
 password: admin
 
 Requirements for the TV app: (all these features are working)
