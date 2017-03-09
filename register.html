@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html class="light-gray" manifest="tvguide.appcache">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Guide</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body class="transparent-bg">
+    <header class="app-header">
+        <div class="container">
+            <div class="col-xs-12 p-a-0">
+                <a id="title" href="index.html" class="h4 p-y-0-7 m-a-0"><strong>TV Guide</strong></a>
+            </div>
+            <div class="col-xs-12 p-a-0 collapse">
+                <form role="search" method="get" action="search.html">
+                    <input required id="searchShows" name="s" class="search-bar" placeholder="Search the shows" type="search">
+                </form>
+                <span class="searchClose"></span>
+            </div>
+        </div>
+    </header>
+    <div id="searchOptions">
+        <div class="container">
+
+        </div>
+    </div>
+    <main id="register" class="container p-relative p-y-3 p-x-0">
+        <div class="container" data-validate-form="true">
+            <div class="alert alert-success small" style="display: none;" data-form-success="true" role="alert">
+                <strong>Well done!</strong> You're successfully registered. <a href="login.html">Click here to login</a>
+            </div>
+            <div class="card m-x-auto">
+                <div class="card-header text-xs-center text-uppercase">
+                    <strong>Register</strong>
+                </div>
+                <div class="card-block">
+                    <p class="card-text small text-xs-center"><strong>Register here and savour a lot of cool features!</strong></p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <input placeholder="Enter your username" data-validate-username="true" data-validate-field="true" class="form-control" type="text" />
+                        <label class="small form-control-label p-y-0" style="display: none"></label>
+                    </li>
+                    <li class="list-group-item">
+                        <input placeholder="Enter your new password" data-validate-newpass="true" data-validate-field="true" class="form-control" type="password" />
+                        <label class="small form-control-label p-y-0" style="display: none"></label>
+                    </li>
+                    <li class="list-group-item">
+                        <input placeholder="Confirm your new password" data-validate-confirmnewpass="true" data-validate-field="true" class="form-control" type="password" />
+                        <label class="small form-control-label p-y-0" style="display: none"></label>
+                    </li>
+                    <li class="list-group-item">
+                        <input placeholder="Enter your email" data-validate-email="true" data-validate-field="true" class="form-control" type="text" />
+                        <label class="small form-control-label p-y-0" style="display: none"></label>
+                    </li>
+                </ul>
+                <div class="card-block">
+                    <div class="text-xs-center">
+                        <a class="btn btn-info" data-validate="true">Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/tvguide.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/validation.js"></script>
+</body>
+</html>

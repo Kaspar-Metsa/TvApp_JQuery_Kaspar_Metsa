@@ -1,0 +1,479 @@
+﻿
+@font-face {
+    font-family: 'ProximaNova';
+    src: url('../fonts/ProximaNova-Light.eot');
+    src: url('../fonts/ProximaNova-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Light.woff') format('woff'), url('../fonts/ProximaNova-Light.ttf') format('truetype'), url('../fonts/ProximaNova-Light.svg#robotolight') format('svg');
+}
+@font-face {
+    font-family: 'ProximaNova';
+    font-weight: bold;
+    src: url('../fonts/ProximaNova-Semibold.eot');
+    src: url('../fonts/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Semibold.woff') format('woff'), url('../fonts/ProximaNova-Semibold.ttf') format('truetype'), url('../fonts/ProximaNova-Semibold.svg#robotolight_italic') format('svg');
+}
+@font-face {
+    font-family: 'ProximaNova';
+    font-style: italic;
+    src: url('../fonts/ProximaNova-LightItalic.eot');
+    src: url('../fonts/ProximaNova-LightItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-LightItalic.woff') format('woff'), url('../fonts/ProximaNova-LightItalic.ttf') format('truetype'), url('../fonts/ProximaNova-LightItalic.svg#robotolight_italic') format('svg');
+}
+@font-face {
+    font-family: 'ETmodules';
+    src: url('../fonts/ETmodules_v2.eot');
+    src: url('../fonts/ETmodules_v2.eot?#iefix') format('embedded-opentype'), url('../fonts/ETmodules_v2.ttf') format('truetype'), url('../fonts/ETmodules_v2.woff') format('woff'), url('../fonts/ETmodules_v2.svg#ETmodules') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    position: relative;
+    margin: 0 auto;
+    font-family: 'ProximaNova';
+    font-size: 18px;
+    padding-top: 49px;
+}
+
+html.main {
+  background: #333;
+}
+
+html.search {
+    background: #fff;
+}
+
+html.main body {
+    color: #fff;
+}
+html.main body {
+    background: none;
+}
+
+header.app-header {
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+header #title {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: 'ProximaNova';
+}
+
+.singleShow {
+    cursor: pointer;
+    overflow: hidden;
+    padding: 2px;
+}
+.singleEpisode.disabled {
+    opacity: 0.7;
+    cursor: default;
+}
+.singleEpisode {
+    padding: 15px 5px;
+    border-bottom: 1px solid #eee;
+}
+.singleEpisode .editDescription, .editSingle {
+    cursor: pointer;
+    margin-left: 5px;
+}
+.singleShow.disabled:hover {
+    background: none;
+}
+.singleEpisode .readonly {
+    border: 0;
+    background: none;
+    font-size: 13px;
+    padding: 0;
+    display: inline;
+}
+.singleEpisode textarea {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+.singleShow > div.head {
+    width: 100%;
+    padding-top: 56.28%;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    position: relative;
+    font-size: 21px;
+}
+#backdrop:before,
+.singleShow > div.head:before {
+    content: '';
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 100%);
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#b3000000',GradientType=0 );
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.singleShow > div.head > p {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    line-height: 1
+}
+.singleShow > div.foot {
+    padding: 10px;
+    background: #222;
+    color: #fff;
+}
+.singleShow > div.foot > p {
+    line-height: 31px;
+}
+.singleShow > div.foot > a {
+    padding: 3px 7px;
+}
+form[role="search"] {
+    margin: 8px 0
+}
+
+.searchClose {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+.searchOpen:before,
+.searchClose:before {
+    font-weight: bold;
+    position: relative;
+    font-family: 'ETmodules';
+    text-transform: none;
+    cursor: pointer;
+    line-height: 27px;
+    vertical-align: middle;
+    color: #fff;
+}
+.searchOpen:before {
+    content: "\55";
+    font-size: 18px;
+    margin-left: 10px;
+}
+.searchClose:before {
+    content: "\4d";
+    font-size: 22px;
+}
+.search-bar {
+    border: 0;
+    width: 100%;
+    padding: 5px 35px;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: none;
+    color: #fff;
+    font-size: 15px;
+}
+.loadingPage,
+.noInternet {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 10px;
+    height: 100%;
+    background: #fff;
+    z-index: 99;
+}
+.noInternet {
+    display: none;
+}
+.p-relative {
+    position: relative;
+}
+#seeTrailer > a {
+    white-space: normal;
+}
+#seeTrailer > div {
+    display: block;
+    margin-top: 10px;
+}
+#searchOptions {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 9;
+    padding-top: 70px;
+    display: none;
+}
+#searchOptions > div {
+    background: #fff;
+}
+.search-option {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+}
+.search-option a {
+    color: #333;
+    text-decoration: none;
+}
+
+.p-y-0-7 {
+    padding-top: 0.7rem !important;
+    padding-bottom: 0.7rem !important;
+}
+
+.p-y-8-px {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+}
+
+.p-y-5-px {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
+.m-t-0-7 {
+    margin-top: 0.7rem !important;
+}
+.episodeWatchToggle,
+.saveDescription {
+    font-size: 0.8rem;
+    padding: .2rem .75rem
+}
+.saveDescription {
+    margin-left: 5px;
+}
+
+@media only screen and (max-width: 480px) {
+    header .btn-sm {
+        font-size: .8rem;
+    }
+}
+
+#profileSettings input.form-control {
+    max-width: 450px
+}
+#profileSettings .form-label {
+    line-height: 38px;
+}
+
+@media only screen and (max-width: 544px) {
+    #profileSettings {
+        padding-top: 0 !important;
+    }
+    #popularButton{
+      display: none;
+    }
+    #watchlistButton{
+      display: none;
+    }
+    #profileButton{
+      display: none;
+    }
+}
+
+.transparent-bg {
+    background: none;
+}
+
+#register {
+    max-width: 400px;
+}
+
+#register .card {
+    background: #f5f5f5;
+    color: #333;
+    box-shadow: 1px 1px 10px 0 #ddd;
+}
+
+#register .card-header {
+    background: #31b0d5;
+    color: #fff;
+    border-bottom: 1px solid #2aabd2;
+}
+
+.light-gray {
+    background: #fafafa;
+}
+
+.et-icon {
+    font-family: 'ETModules';
+    font-weight: 900;
+}
+
+#backdrop {
+    background-size: cover;
+    position: relative;
+    padding-top: 15%;
+    padding-bottom: 0px;
+}
+#backdrop > .container {
+    position: relative
+}
+
+#backdrop > .container > .head-data {
+    position: absolute;
+    bottom: 20px;
+    color: #fff;
+    left: 10px;
+}
+
+#showPoster > img {
+    border: 2px solid #fff;
+    margin-bottom: -30px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#showWatchList .singleShow > div.foot {
+    min-height: 91px;
+}
+
+#season-list > div {
+    cursor: pointer;
+}
+
+@media (min-width: 250px) {
+    #cast-list > div,
+    #season-list > div {
+        height: 270px;
+    }
+}
+
+@media (min-width: 300px) {
+    #cast-list > div,
+    #season-list > div {
+        height: 300px;
+    }
+}
+
+@media (min-width: 465px) {
+    #cast-list > div,
+    #season-list > div {
+        height: 400px;
+    }
+}
+
+@media (min-width: 544px) {
+
+    #cast-list > div,
+    #season-list > div {
+        height: 300px;
+    }
+
+    #cast-list > div > div:after {
+        padding-top: 160%;
+        display: block;
+        content: '';
+    }
+
+    #cast-list > div > div > div {
+        min-height: 100px;
+    }
+}
+
+@media (min-width: 768px) {
+    #cast-list > div {
+        height: 270px;
+    }
+    #season-list > div {
+        height: 250px;
+    }
+}
+
+@media (max-width: 767px) {
+    #backdrop > .container > .head-data {
+        position: relative;
+        left: 0;
+        bottom: auto;
+        padding: 10px;
+    }
+
+    #showPoster > img {
+        margin-bottom: 10px;
+        margin-top: -10px;
+        max-width: 100px;
+    }
+    #showTitle {
+        font-size: 22px;
+    }
+    .head-data > span {
+        font-size: 14px;
+    }
+    .singleEpisode > div {
+        padding: 15px 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    #showPoster > img {
+        margin-top: 0px;
+        max-width: 80px;
+    }
+    #season-list .small,
+    #cast-list .small {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-device-width: 800px) {
+    html {
+         background: url(background.jpg) #000 no-repeat center center fixed;
+    }
+    #bgvid {
+        display: none;
+    }
+}
+
+video#bgvid {
+    position: fixed;
+    float: left;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(background.jpg) no-repeat;
+    background-size: cover;
+}
+
+.overlay {
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    overflow: auto;
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.7);
+}
+input[name=rate]{
+    display: none;
+}
+a.rate-episode{
+    text-decoration: none;
+}
+#rate-popover label{
+    cursor: pointer;
+}
+.icon_heart_alt:before {
+ content: "\e030";
+}
+.icon_heart:before {
+ content: "\e089";
+}

@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html manifest="tvguide.appcache">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TV Guide</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body class="p-t-0">
+    <header class="app-header">
+        <div class="container">
+            <div class="col-xs-12 p-a-0">
+                <a id="title" href="series.html" class="h4 p-y-0-7 m-a-0"><strong>TV Guide</strong></a>
+                <div class="pull-xs-right p-y-8-px m-l-1">
+                  <a href="series.html" id="popularButton" class="btn btn-primary transparent-bg btn-sm p-y-5-px ">Popular</a>
+                    <a href="watchlist.html" class="btn btn-primary transparent-bg btn-sm p-y-5-px">Watchlist</a>
+                    <a href="profile.html" class="btn btn-primary transparent-bg btn-sm p-y-5-px">Profile</a>
+                    <a href="index.html" class="btn btn-primary transparent-bg btn-sm p-y-5-px">Logout</a>
+                    <span class="searchOpen"></span>
+                </div>
+            </div>
+            <div class="col-xs-12 p-a-0 collapse">
+                <form role="search" method="get" action="search.html">
+                    <input required id="searchShows" name="s" class="search-bar" placeholder="Search the shows" type="search">
+                </form>
+                <span class="searchClose"></span>
+            </div>
+        </div>
+    </header>
+    <div id="searchOptions">
+        <div class="container">
+
+        </div>
+    </div>
+    <div id="backdrop" class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <div id="showPoster" class="col-md-2 pull-md-left text-xs-center"></div>
+            <div class="col-md-10 col-md-offset-2 text-md-left text-xs-center head-data p-x-0">
+                <h3 id="showTitle"></h3>
+                <span class="h6 m-t-2 text-nowrap text-xs-center text-uppercase"><strong>Rating:</strong></span>
+                <span id="showRating" class="text-nowrap small"></span>
+                <span class="h6 m-t-2 text-nowrap m-l-1 text-xs-center text-uppercase"><strong>Genre:</strong></span>
+                <span id="showGenre" class="text-nowrap small"></span>
+                <span class="h6 m-t-2 m-l-1 text-nowrap text-xs-center text-uppercase"><strong>Release Date:</strong></span>
+                <span id="showRelease" class="text-nowrap small"></span>
+            </div>
+        </div>
+    </div>
+    <div class="loadingPage">
+        <p class="small text-xs-center m-y-3 p-y-3">Loading</p>
+    </div>
+    <main id="singleShowContainer" class="container p-relative p-x-0 p-y-2">
+        <div class="noInternet">
+            <p class="small text-xs-center m-y-3 m-x-1 alert alert-danger">You need internet connection to see this.</p>
+        </div>
+        <div id="showOverview" class="col-md-10 col-md-offset-2 p-y-2 small"></div>
+        <div id="watchlistToggle" class="col-md-10 col-md-offset-2 text-xs-center p-t-2">
+            <a class="btn btn-block btn-info"></a>
+        </div>
+        <div id="seeTrailer" class="col-md-10 col-md-offset-2 p-t-1 p-b-2">
+            <a class="btn btn-block btn-info disabled">Trailer not found.</a>
+            <div style="display: none; max-width: 690px;" class="m-x-auto">
+                <iframe allowfullscreen frameborder="0" width="690" height="400" src=""></iframe>
+            </div>
+        </div>
+        <div class="col-md-10 col-md-offset-2 col-xs-12">
+            <p class="h5 m-b-2"><strong>Seasons:</strong></p>
+            <div id="season-list" class="m-b-3 p-a-0 col-xs-12">
+
+            </div>
+        </div>
+        <div class="col-md-10 col-md-offset-2 col-xs-12">
+            <p class="h5 m-b-2"><strong>Actors:</strong></p>
+            <div id="cast-list" class="m-b-3 p-a-0 col-xs-12">
+
+            </div>
+        </div>
+    </main>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.fitvids.js"></script>
+    <script src="js/tvguide.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

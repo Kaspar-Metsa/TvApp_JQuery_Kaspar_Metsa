@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html class="main" manifest="tvguide.appcache">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TV Guide</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <div class="overlay"></div>
+        <video autoplay loop poster="img/background.png" id="bgvid">
+            <source src="img/background.webm" type="video/webm">
+        </video>
+    </div>
+
+    <header class="app-header">
+        <div class="container">
+            <div class="col-xs-12 p-a-0">
+                <a id="title" href="index.html" class="h4 p-y-0-7 m-a-0"><strong>TV Guide</strong></a>
+            </div>
+            <div class="col-xs-12 p-a-0 collapse">
+                <form role="search" method="get" action="search.html">
+                    <input required id="searchShows" name="s" class="search-bar" placeholder="Search the shows" type="search">
+                </form>
+                <span class="searchClose"></span>
+            </div>
+        </div>
+    </header>
+    <div id="searchOptions">
+        <div class="container">
+
+        </div>
+    </div>
+    <main>
+        <div class="container p-b-0 p-t-3 text-xs-center">
+            <h1 class="m-y-3 text-md-left text-xs-center col-md-5"><strong>Your minimal <span class="text-nowrap text-info">TV Series</span> solution</strong></h1>
+        </div>
+        <div class="container">
+            <div class="col-md-3 m-t-0-7"><a href="register.html" class="btn btn-info btn-block">Register</a></div>
+            <div class="col-md-3 m-t-0-7"><a href="login.html" class="btn btn-info-outline btn-block">Login</a></div>
+        </div>
+    </main>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/tvguide.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

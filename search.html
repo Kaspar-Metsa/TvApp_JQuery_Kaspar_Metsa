@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html manifest="tvguide.appcache">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TV Guide</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="app-header">
+        <div class="container">
+            <div class="col-xs-12 p-a-0">
+                <a id="title" href="series.html" class="h4 p-y-0-7 m-a-0"><strong>TV Guide</strong></a>
+                <div class="pull-xs-right p-y-8-px m-l-1">
+                    <a href="series.html" class="btn btn-primary transparent-bg btn-sm p-y-5-px">Popular</a>
+                    <a href="watchlist.html" class="btn btn-primary transparent-bg btn-sm p-y-5-px">Watchlist</a>
+                    <a href="profile.html" id="profileButton" class="btn btn-primary transparent-bg btn-sm p-y-5-px">Profile</a>
+                    <a href="index.html" class="btn btn-primary transparent-bg btn-sm p-y-5-px">Logout</a>
+                    <span class="searchOpen"></span>
+                </div>
+            </div>
+            <div class="col-xs-12 p-a-0 collapse">
+                <form role="search" method="get" action="search.html">
+                    <input required id="searchShows" name="s" class="search-bar" placeholder="Search the shows" type="search">
+                </form>
+                <span class="searchClose"></span>
+            </div>
+        </div>
+    </header>
+    <div id="searchOptions">
+        <div class="container">
+
+        </div>
+    </div>
+    <main class="container p-relative p-y-2 p-x-0">
+        <div class="loadingPage">
+            <p class="small text-xs-center m-y-3 p-y-3">Loading</p>
+        </div>
+        <div class="noInternet">
+            <p class="small text-xs-center m-y-3 p-y-3">You need internet connection to see this.</p>
+        </div>
+        <div class="clearfix">
+            <h5 class="text-uppercase m-b-2 m-x-1"><strong>Search results for: <span id="searchQuery" style="text-transform: none" class="text-info"></span></strong></h5>
+        </div>
+        <div id="searchResults">
+            <p class="small text-xs-center m-y-3">No results found.</p>
+        </div>
+    </main>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/tvguide.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>
